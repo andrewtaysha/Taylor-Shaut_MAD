@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="WYs-xa-Epv">
+                                <rect key="frame" x="75" y="150" width="450" height="300"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="nKd-6o-Y3h">
+                                <rect key="frame" x="218" y="65" width="164" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPn-Kf-9Nr">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                        <state key="normal" title="Nature"/>
+                                        <connections>
+                                            <action selector="chooseArt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vS-tM-6ne"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e43-SY-Vhl">
+                                        <rect key="frame" x="117" y="0.0" width="47" height="30"/>
+                                        <state key="normal" title="City"/>
+                                        <connections>
+                                            <action selector="chooseArt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJL-73-pHY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andrew Taylor-Shaut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op3-oL-9x7">
+                                <rect key="frame" x="220" y="28" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkC-l2-ZzX">
+                                <rect key="frame" x="219" y="103" width="162" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Wfi-D9-KcJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.29953370418848169" green="0.29953370418848169" blue="0.29953370418848169" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94656004581151831" green="0.94656004581151831" blue="0.94656004581151831" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UkC-l2-ZzX" firstAttribute="leading" secondItem="Op3-oL-9x7" secondAttribute="leading" constant="-1" id="5vj-EF-bBw"/>
+                            <constraint firstItem="Op3-oL-9x7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88g-99-8pd"/>
+                            <constraint firstItem="WYs-xa-Epv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Ml-Lf-qW8"/>
+                            <constraint firstItem="WYs-xa-Epv" firstAttribute="centerX" secondItem="nKd-6o-Y3h" secondAttribute="centerX" id="Mc1-lh-rIW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WYs-xa-Epv" secondAttribute="bottom" constant="150" id="QOA-gf-gNi"/>
+                            <constraint firstItem="WYs-xa-Epv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="Z9F-MQ-6Cq"/>
+                            <constraint firstItem="UkC-l2-ZzX" firstAttribute="top" secondItem="nKd-6o-Y3h" secondAttribute="bottom" constant="8" symbolic="YES" id="bfZ-Um-kfE"/>
+                            <constraint firstItem="nKd-6o-Y3h" firstAttribute="top" secondItem="Op3-oL-9x7" secondAttribute="bottom" constant="16" id="fIn-ZL-3aL"/>
+                            <constraint firstItem="nKd-6o-Y3h" firstAttribute="centerX" secondItem="Op3-oL-9x7" secondAttribute="centerX" id="ivd-YJ-vBn"/>
+                            <constraint firstItem="Op3-oL-9x7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="tUM-X1-3ge"/>
+                            <constraint firstItem="UkC-l2-ZzX" firstAttribute="trailing" secondItem="nKd-6o-Y3h" secondAttribute="trailing" constant="-1" id="vZD-kS-c6P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="artImage" destination="WYs-xa-Epv" id="RWX-HC-eNN"/>
+                        <outlet property="desc" destination="UkC-l2-ZzX" id="dOq-XV-YFt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="316"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Profile" width="1000" height="666"/>
+    </resources>
+</document>

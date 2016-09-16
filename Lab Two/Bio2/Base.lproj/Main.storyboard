@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bio2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="UND-K2-IR3">
+                                <rect key="frame" x="150" y="41" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Wl5-db-EQn"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="wQ3-wh-4aM">
+                                <rect key="frame" x="245" y="308" width="111" height="29"/>
+                                <segments>
+                                    <segment title="Nature"/>
+                                    <segment title="City"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeInfo:" destination="BYZ-38-t0r" eventType="valueChanged" id="d8Z-CF-Z1k"/>
+                                </connections>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yd7-Gw-kbq">
+                                <rect key="frame" x="401" y="359" width="51" height="31"/>
+                                <connections>
+                                    <action selector="theSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="MsD-Td-D9q"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zsb-qK-CgT">
+                                <rect key="frame" x="334" y="413" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="n1f-O3-4Z3"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeFontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="gBH-sb-rRe"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capitalization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCN-Rh-IZ4">
+                                <rect key="frame" x="150" y="364" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw9-WI-fUQ">
+                                <rect key="frame" x="192" y="417" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andrew Taylor-Shaut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joQ-fb-tgC">
+                                <rect key="frame" x="150" y="264" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0RU-15-Uyu"/>
+                                    <constraint firstAttribute="width" constant="300" id="8lu-gw-Fcv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UND-K2-IR3" firstAttribute="centerX" secondItem="joQ-fb-tgC" secondAttribute="centerX" id="27D-gn-G5D"/>
+                            <constraint firstItem="UND-K2-IR3" firstAttribute="trailing" secondItem="Yd7-Gw-kbq" secondAttribute="trailing" id="4eD-iZ-zzc"/>
+                            <constraint firstItem="wQ3-wh-4aM" firstAttribute="top" secondItem="joQ-fb-tgC" secondAttribute="bottom" constant="23" id="PGh-om-6NA"/>
+                            <constraint firstItem="UND-K2-IR3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PKL-Lv-4eA"/>
+                            <constraint firstItem="Zsb-qK-CgT" firstAttribute="top" secondItem="Yd7-Gw-kbq" secondAttribute="bottom" constant="23" id="Qgh-53-lSq"/>
+                            <constraint firstItem="Yd7-Gw-kbq" firstAttribute="centerY" secondItem="qCN-Rh-IZ4" secondAttribute="centerY" id="Wvk-oU-2g3"/>
+                            <constraint firstItem="UND-K2-IR3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="Xyk-Za-m8X"/>
+                            <constraint firstItem="joQ-fb-tgC" firstAttribute="top" secondItem="UND-K2-IR3" secondAttribute="bottom" constant="23" id="ZiF-eT-dfT"/>
+                            <constraint firstItem="qCN-Rh-IZ4" firstAttribute="top" secondItem="wQ3-wh-4aM" secondAttribute="bottom" constant="28" id="fvf-9t-QA1"/>
+                            <constraint firstItem="UND-K2-IR3" firstAttribute="leading" secondItem="qCN-Rh-IZ4" secondAttribute="leading" id="iaR-lm-cUi"/>
+                            <constraint firstItem="joQ-fb-tgC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-25.5" id="muq-tt-RaT"/>
+                            <constraint firstItem="Qw9-WI-fUQ" firstAttribute="centerY" secondItem="Zsb-qK-CgT" secondAttribute="centerY" id="reT-Om-aJH"/>
+                            <constraint firstItem="joQ-fb-tgC" firstAttribute="centerX" secondItem="wQ3-wh-4aM" secondAttribute="centerX" id="vsn-1v-xRE"/>
+                            <constraint firstItem="UND-K2-IR3" firstAttribute="trailing" secondItem="Zsb-qK-CgT" secondAttribute="trailing" id="wQP-zw-LTx"/>
+                            <constraint firstItem="Qw9-WI-fUQ" firstAttribute="centerX" secondItem="qCN-Rh-IZ4" secondAttribute="centerX" id="yCT-fG-Skl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fontSizeLabel" destination="Qw9-WI-fUQ" id="vce-TN-OPO"/>
+                        <outlet property="image" destination="UND-K2-IR3" id="Yhf-zm-PHI"/>
+                        <outlet property="imageControl" destination="wQ3-wh-4aM" id="exd-f3-Kej"/>
+                        <outlet property="name" destination="joQ-fb-tgC" id="Gl0-Ij-Qcq"/>
+                        <outlet property="titleSwitch" destination="Yd7-Gw-kbq" id="lys-bm-6Az"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="190"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="1000" height="666"/>
+    </resources>
+</document>
