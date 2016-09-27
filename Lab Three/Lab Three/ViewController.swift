@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var totalAmount: UITextField!
-    @IBOutlet weak var tipPercent: UITextField!
+    @IBOutlet weak var taxPercent: UITextField!
     @IBOutlet weak var people: UITextField!
-    @IBOutlet weak var tipDue: UILabel!
+    @IBOutlet weak var taxDue: UILabel!
     @IBOutlet weak var totalDuePerPerson: UILabel!
     @IBOutlet weak var totalDue: UILabel!
     
@@ -33,16 +33,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         else {
             amount = Float(totalAmount.text!)!
         }
-        if tipPercent.text!.isEmpty {
+        if taxPercent.text!.isEmpty {
             pct = 0.0
         }
         else {
-            pct = Float(tipPercent.text!)!/100
+            pct = Float(taxPercent.text!)!/100
         }
         
         let numberOfPeople = Int(people.text!) // returns an optional
-        let tip=amount*pct
-        let total=amount+tip
+        let tax=amount*pct
+        let total=amount+tax
         var personTotal : Float = 0.0 //specify Float so it's not a Double
         if numberOfPeople != nil {
             if numberOfPeople! > 0 {
@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //format results as currency
         let currencyFormatter = NSNumberFormatter ()
         currencyFormatter.numberStyle=NSNumberFormatterStyle.CurrencyStyle // set the number style
-        tipDue.text=currencyFormatter.stringFromNumber(tip)
+        taxDue.text=currencyFormatter.stringFromNumber(tax)
         totalDue.text=currencyFormatter.stringFromNumber(total)
         totalDuePerPerson.text=currencyFormatter.stringFromNumber(personTotal)
     }
@@ -78,7 +78,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         totalAmount.delegate=self
-        tipPercent.delegate=self
+        taxPercent.delegate=self
         people.delegate=self
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
