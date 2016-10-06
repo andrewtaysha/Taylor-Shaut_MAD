@@ -22,6 +22,13 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let viewController = segue.destinationViewController as! ViewController
+        viewController.firstNameLabel.text = editFirst.text!
+        viewController.lastNameLabel.text = editLast.text!
+        viewController.numberLabel.text = editNumber.text!
+    }
+    
     override func viewDidLoad() {
         editFirst.delegate=self
         editLast.delegate=self

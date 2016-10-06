@@ -13,9 +13,4 @@ class Contact {
     var conLast : String?
     var conNumber : String?
     
-    init() {
-        conFirst="First Name"
-        conLast="Last Name"
-        conNumber="Number"
-    }
 }

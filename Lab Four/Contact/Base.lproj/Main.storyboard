@@ -109,7 +109,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="6Y1-Hs-Sux"/>
                                     <barButtonItem title="Done" id="5Tc-d2-oVh">
                                         <connections>
-                                            <segue destination="HZV-Qd-tF4" kind="unwind" unwindAction="unwindSegue:" id="KvM-qz-pkH"/>
+                                            <segue destination="HZV-Qd-tF4" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegue:" id="KvM-qz-pkH"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
