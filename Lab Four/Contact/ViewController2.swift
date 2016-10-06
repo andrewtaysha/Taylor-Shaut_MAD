@@ -18,6 +18,10 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         return true
     }
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         editFirst.delegate=self
         editLast.delegate=self

@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == ""{
-            var scene2ViewController = segue.destinationViewController as! ViewController
+            /*var scene2ViewController = segue.destinationViewController as! ViewController
             if editFirst.text.isEmpty == false{
                 scene2ViewController.user.conFirst=editFirst.text
             }
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             }
             if editNumber.text.isEmpty == false{
                 scene2ViewController.user.conNumber=editNumber.text
-            }
+            }*/
         }
     }
     
