@@ -12,12 +12,9 @@ class ViewController: UIViewController {
 
     var user=Contact()
     
-
-    
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
-    
        
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +27,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindSegue (segue:UIStoryboardSegue){
-        //firstNameLabel.text=user.conFirst
-        //lastNameLabel.text=user.conLast
-        //numberLabel.text=user.conNumber
+        firstNameLabel.text=user.conFirst
+        lastNameLabel.text=user.conLast
+        numberLabel.text=user.conNumber
     }
-
-
 }
-

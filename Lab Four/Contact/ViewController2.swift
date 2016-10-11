@@ -23,10 +23,22 @@ class ViewController2: UIViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let viewController = segue.destinationViewController as! ViewController
+        if segue.identifier == "Done" {
+            let viewController = segue.destinationViewController as! ViewController
+            if editFirst.text!.isEmpty == false{
+                viewController.user.conFirst=editFirst.text
+            }
+            if editLast.text!.isEmpty == false{
+                viewController.user.conLast=editLast.text
+            }
+            if editNumber.text!.isEmpty == false{
+                viewController.user.conNumber=editNumber.text
+            }
+        }
+        /*let viewController = segue.destinationViewController as! ViewController
         viewController.firstNameLabel.text = editFirst.text!
         viewController.lastNameLabel.text = editLast.text!
-        viewController.numberLabel.text = editNumber.text!
+        viewController.numberLabel.text = editNumber.text!*/
     }
     
     override func viewDidLoad() {
