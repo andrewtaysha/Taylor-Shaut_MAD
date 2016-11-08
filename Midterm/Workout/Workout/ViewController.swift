@@ -23,20 +23,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if workoutTime.text!.isEmpty {
             miles = 0.0
         } else {
-            miles = Float(workoutTime.text!)!/6
+            miles = Float(workoutTime.text!)!/10
         }
         if workoutTime.text!.isEmpty {
             cal = 0.0
         } else {
-            cal = Float(workoutTime.text!)!/10
+            cal = Float(workoutTime.text!)! * 10
         }
         let workoutFormatter = NSNumberFormatter ()
         workoutFormatter.numberStyle=NSNumberFormatterStyle.DecimalStyle
         milesMet.text=workoutFormatter.stringFromNumber(miles)
         caloriesBurnt.text=workoutFormatter.stringFromNumber(cal)
-        /*let wokout = Int(workoutTime.text!)
+        let workout = Int(workoutTime.text!)
         if workout != nil {
-            if workout! > 30 {
+            if workout < 30 {
                 let alert = UIAlertController(title: "Caution", message: "It is recommended to workout for at least 30 minutes every day", preferredStyle: UIAlertControllerStyle.Alert)
                 let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
                     self.updateWorkoutResults()
@@ -44,24 +44,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 alert.addAction(okAction)
                 presentViewController(alert, animated: true, completion: nil)
             }
-        }*/
-    }
-    
-    /*@IBAction func updateWeek(sender: UISwitch) {
-        updateDayToWeek()
-    }
-    func updateDayToWeek() {
-        if dayWeekSwitch.on {
-            workoutTime.text=workoutsPerWeek.text*workoutsPerWeek.text
-        } else {
-            
         }
     }
+    
+    @IBAction func updateWeek(sender: UISwitch) {
+        //updateDayToWeek()
+    }
+    func updateDayToWeek() {
+//        if dayWeekSwitch.on {
+//            workoutTime.text=workoutsPerWeek.text*workoutsPerWeek.text
+//        } else {
+//            
+//        }
+    }
     @IBAction func changeWorkoutAmount(sender: UISlider) {
-        let workoutsPerWeek=sender.value
-        workoutsPerWeek.text=String(format: "%.0f")
+//        let workoutsPerWeek=sender.value
+//        workoutsPerWeek.text=String(format: "%.0f")
 
-    }*/
+    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
