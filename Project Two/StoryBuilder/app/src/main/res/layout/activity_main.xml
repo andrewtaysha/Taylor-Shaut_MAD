@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.andrewtaylor_shaut.storybuilder.MainActivity">
+<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear1">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/name"
+        android:ems="5"
+        android:id="@+id/nameEditText" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1.0"
+    android:orientation="horizontal"
+    android:id="@+id/linear2"
+    android:layout_below="@id/linear1">
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:inputType="textPersonName"
+        android:hint="@string/edit1"
+        android:ems="5"
+        android:id="@+id/editText" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:inputType="textPersonName"
+        android:hint="@string/edit2"
+        android:ems="5"
+        android:id="@+id/editText2"
+        android:layout_alignEnd="@id/editText"
+        android:layout_alignRight="@id/editText"/>
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0"
+        android:orientation="horizontal"
+        android:id="@+id/linear3"
+        android:layout_below="@id/linear2">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:inputType="textPersonName"
+            android:hint="@string/edit3"
+            android:ems="5"
+            android:id="@+id/editText3" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:inputType="textPersonName"
+            android:hint="@string/edit4"
+            android:ems="5"
+            android:id="@+id/editText4"
+            android:layout_alignEnd="@id/editText3"
+            android:layout_alignRight="@id/editText3"/>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/linear3"
+    android:id="@+id/linear4"
+    android:layout_marginTop="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select" />
+</LinearLayout>
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/linear4"
+    android:weightSum="1.0"
+    android:layout_marginTop="10dp"
+    android:id="@+id/table_layout">
+    <TableRow>
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:id="@+id/checkbox1"
+            android:text="@string/poem1"/>
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_alignEnd="@id/checkbox1"
+            android:layout_alignRight="@id/checkbox1"
+            android:id="@+id/checkbox2"
+            android:text="@string/poem2"/>
+    </TableRow>
+
+    <TableRow>
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:id="@+id/checkbox3"
+            android:text="@string/poem3"/>
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_alignEnd="@id/checkbox3"
+            android:layout_alignRight="@id/checkbox3"
+            android:id="@+id/checkbox4"
+            android:text="@string/poem4"/>
+    </TableRow>
+</TableLayout>
+
+    <Button
+        android:text="@string/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table_layout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button"
+        android:onClick="rewritePoem"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/summerTextView"
+        android:text=""
+        android:layout_below="@+id/button" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/fallTextView"
+        android:text=""
+        android:layout_below="@+id/button" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/winterTextView"
+        android:text=""
+        android:layout_below="@+id/button" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/springTextView"
+        android:text=""
+        android:layout_below="@+id/button" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:id="@+id/imageView" />
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Rewrite Poems</string>
+    <string name="name">Your Name</string>
+    <string name="edit1">Noun</string>
+    <string name="edit2">Adjective</string>
+    <string name="edit3">Verb</string>
+    <string name="edit4">Noun</string>
+    <string name="select">Select One</string>
+    <string name="poem1">Summer</string>
+    <string name="poem2">Fall</string>
+    <string name="poem3">Winter</string>
+    <string name="poem4">Spring</string>
+    <string name="button">CREATE A POEM</string>
+    <string name="Summer"></string>
+    <string name="Fall"></string>
+    <string name="Winter"></string>
+    <string name="Spring"></string>
+</resources>
