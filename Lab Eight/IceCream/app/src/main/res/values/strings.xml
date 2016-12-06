@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ice Cream</string>
+    <string name="title">Ice Cream Finder</string>
+    <string name="ice_cream_type">Choose your personality</string>
+    <string name="button">Find Your Ice Cream</string>
+    <string-array name="personality">
+        <item>adventurous</item>
+        <item>quircky</item>
+        <item>relaxed</item>
+        <item>average</item>
+        <item>not average</item>
+    </string-array>
+    <string name="ice_cream_image">ice cream scoop</string>
+    <string name="suggested_ice_cream"></string>
+</resources>
