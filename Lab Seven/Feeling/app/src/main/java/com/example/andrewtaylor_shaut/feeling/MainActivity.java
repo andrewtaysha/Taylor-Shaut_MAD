@@ -1,6 +1,5 @@
 package com.example.andrewtaylor_shaut.feeling;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,10 +12,10 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+
+import static com.example.andrewtaylor_shaut.feeling.R.id.imageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,9 +43,35 @@ public class MainActivity extends AppCompatActivity {
         String moodValue = String.valueOf(moodSpinner.getSelectedItem());
 
         //image view
-        ImageView ImageView = (ImageView) findViewById(R.id.imageView);
-        ImageView.setImageResource(R.drawable.happy);
+        ImageView emotionImage = (ImageView) findViewById(imageView);
 
+        /*set the image based on the spinner value
+        switch(moodValue){
+            case "happy":
+                emotionImage.setImageResource(R.drawable.happy);
+                break;
+            case "sad":
+                emotionImage.setImageResource(R.drawable.sad);
+                break;
+            case "mad":
+                emotionImage.setImageResource(R.drawable.mad);
+                break;
+            case "excited":
+                emotionImage.setImageResource(R.drawable.excited);
+                break;
+            default:
+                break;
+        }*/
+
+        if(moodValue.equals("happy")){
+            emotionImage.setImageResource(R.drawable.happy);
+        } else if(moodValue.equals("sad")){
+            emotionImage.setImageResource(R.drawable.sad);
+        } else if(moodValue.equals("mad")){
+            emotionImage.setImageResource(R.drawable.mad);
+        } else if(moodValue.equals("excited")){
+            emotionImage.setImageResource(R.drawable.excited);
+        }
 
         //toggle button
         ToggleButton toggle = (ToggleButton) findViewById(R.id.energyToggleButton);
@@ -110,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
             checkbox_string += " enlightened";
         }
 
-
         //text view
         TextView feeling = (TextView) findViewById(R.id.feelingTextView);
         feeling.setText(nameValue + " is a " + moodValue + ", " + energyString + ", and " + checkbox_string
@@ -118,39 +142,4 @@ public class MainActivity extends AppCompatActivity {
                 + storytype + " yoga.");
     }
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("Main Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
-    }
 }

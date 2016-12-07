@@ -27,8 +27,8 @@ public class FindIceCreamActivity extends AppCompatActivity {
         setContentView(R.layout.activity_find_ice_cream);
         //get button
         final Button button = (Button) findViewById(R.id.button);
-        View.OnClickListener onclick = new View.OnClickListener(){
-            public void onClick(View view){
+        View.OnClickListener onclick = new View.OnClickListener() {
+            public void onClick(View view) {
                 findIceCream(view);
             }
         };
@@ -38,7 +38,7 @@ public class FindIceCreamActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-}
+
 
     private IceCreamFlavor myIceCreamFlavor = new IceCreamFlavor();
 
@@ -54,6 +54,7 @@ public class FindIceCreamActivity extends AppCompatActivity {
         //start the intent
         startActivity(intent);
         //pass data
+        String suggestedIceCream = myIceCreamFlavor.getIceCreamFlavor();
         intent.putExtra("iceCreamFlavor", suggestedIceCream);
         //start the intent
         startActivity(intent);
@@ -96,3 +97,4 @@ public class FindIceCreamActivity extends AppCompatActivity {
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }
+}
