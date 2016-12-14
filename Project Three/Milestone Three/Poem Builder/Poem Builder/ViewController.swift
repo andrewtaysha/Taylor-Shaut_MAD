@@ -96,12 +96,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
 
-    func textFieldDidEndEditing(textField: UITextField) {
+    /*func textFieldDidEndEditing(textField: UITextField) {
         updateText()
-    }
+    }*/
 
     @IBAction func changeSeason(sender: UISegmentedControl) {
         updateImage()
+        updateText()
     }
     
     func updateImage(){
