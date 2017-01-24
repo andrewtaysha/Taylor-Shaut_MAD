@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var poem: UITextView!
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
@@ -31,67 +31,67 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
         if name.text!.isEmpty {
             //create a UIAlertController object
-            let alert=UIAlertController(title: "Step One", message: "You Must Enter A Name", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert=UIAlertController(title: "Step One", message: "You Must Enter A Name", preferredStyle: UIAlertControllerStyle.alert)
             //create a UIAlertAction object for the button
-            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.Cancel, handler: nil)
+            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.cancel, handler: nil)
             alert.addAction(cancelAction) //adds the alert action to the alert object
-            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in
+            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {action in
                 self.name.text="Joe"
             })
             alert.addAction(okAction)
-            presentViewController(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         }
         
         if nounOne.text!.isEmpty {
             //create a UIAlertController object
-            let alert=UIAlertController(title: "Step Two", message: "You Must Enter A Noun", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert=UIAlertController(title: "Step Two", message: "You Must Enter A Noun", preferredStyle: UIAlertControllerStyle.alert)
             //create a UIAlertAction object for the button
-            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.Cancel, handler: nil)
+            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.cancel, handler: nil)
             alert.addAction(cancelAction) //adds the alert action to the alert object
-            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in
+            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {action in
                 self.nounOne.text="apple"
             })
             alert.addAction(okAction)
-            presentViewController(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         }
         
         if adjective.text!.isEmpty {
             //create a UIAlertController object
-            let alert=UIAlertController(title: "Step Three", message: "You Must Enter An Adjective", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert=UIAlertController(title: "Step Three", message: "You Must Enter An Adjective", preferredStyle: UIAlertControllerStyle.alert)
             //create a UIAlertAction object for the button
-            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.Cancel, handler: nil)
+            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.cancel, handler: nil)
             alert.addAction(cancelAction) //adds the alert action to the alert object
-            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in
+            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {action in
                 self.adjective.text="light"
             })
             alert.addAction(okAction)
-            presentViewController(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         }
 
         if verb.text!.isEmpty {
             //create a UIAlertController object
-            let alert=UIAlertController(title: "Step Four", message: "You Must Enter A Verb", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert=UIAlertController(title: "Step Four", message: "You Must Enter A Verb", preferredStyle: UIAlertControllerStyle.alert)
             //create a UIAlertAction object for the button
-            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.Cancel, handler: nil)
+            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.cancel, handler: nil)
             alert.addAction(cancelAction) //adds the alert action to the alert object
-            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in
+            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {action in
                 self.verb.text="run"
             })
             alert.addAction(okAction)
-            presentViewController(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         }
         
         if nounTwo.text!.isEmpty {
             //create a UIAlertController object
-            let alert=UIAlertController(title: "Step Five", message: "You Must Enter A Noun", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert=UIAlertController(title: "Step Five", message: "You Must Enter A Noun", preferredStyle: UIAlertControllerStyle.alert)
             //create a UIAlertAction object for the button
-            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.Cancel, handler: nil)
+            let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.cancel, handler: nil)
             alert.addAction(cancelAction) //adds the alert action to the alert object
-            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {action in
+            let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {action in
                 self.nounTwo.text="mouse"
             })
             alert.addAction(okAction)
-            presentViewController(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         }
     }
 
@@ -100,7 +100,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         updateText()
     }*/
 
-    @IBAction func changeSeason(sender: UISegmentedControl) {
+    @IBAction func changeSeason(_ sender: UISegmentedControl) {
         updateImage()
         updateText()
     }
